@@ -17,14 +17,14 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ secrets.REGISTRY_NAME }}/chtw/action-ci:$(date +%s)
+      run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
     
     - name: Publish to Docker Repository
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: ispeakcode/docker-githubaction
-        image_name: ${{ secrets.REGISTRY_NAME }}/chtw/action-ci:$(date +%s)
-        repository: ${{ secrets.REGISTRY_NAME }}/chtw/action-ci
+        image_name: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
+        repository: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         dockerfile: Dockerfile
