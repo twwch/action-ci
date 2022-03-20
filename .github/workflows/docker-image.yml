@@ -27,6 +27,7 @@ jobs:
       - name: Publish to Docker Repository
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
+          name: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
           image_name: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
           repository: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci
           username: ${{ secrets.DOCKER_USERNAME }}
