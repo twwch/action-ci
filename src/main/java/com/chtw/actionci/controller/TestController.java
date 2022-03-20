@@ -1,4 +1,4 @@
-package com.chtw.actionci.test;
+package com.chtw.actionci.controller;
 
 import com.chtw.actionci.common.response.CommRespUtils;
 import org.springframework.web.bind.annotation.GetMapping;
