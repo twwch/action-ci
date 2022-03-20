@@ -30,6 +30,6 @@ jobs:
           name: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
           image_name: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci:master
           repository: registry.cn-hangzhou.aliyuncs.com/chtw/action-ci/chtw/action-ci
-          username: ${undefined{ secrets.DOCKER_USERNAME }}
-          password: ${undefined{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
