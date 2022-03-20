@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: action-ci
+
+server:
+  port: 9999
+
+  servlet:
+    context-path: /action/api
