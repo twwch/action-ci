@@ -1,6 +1,7 @@
 package com.chtw.actionci.controller;
 
 import com.chtw.actionci.common.response.CommRespUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -54,7 +55,7 @@ public class TestController {
 
         List<Map<String, String>> res = new ArrayList<>();
         for (Map<String, String> stringMap : list) {
-            if (stringMap.get("value").contains(searchKey)) {
+            if ((stringMap.get("value").contains(searchKey) && StringUtils.hasText(searchKey)) || !StringUtils.hasText(searchKey)) {
                 res.add(stringMap);
             }
         }
