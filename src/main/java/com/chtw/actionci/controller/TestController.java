@@ -20,10 +20,10 @@ public class TestController {
         return CommRespUtils.success("这个接口用于测试！");
     }
 
-    @GetMapping(value = "/state")
-    public CommRespUtils<List<Map<String, String>>> test2(String searchKey) {
+    @GetMapping(value = "/search")
+    public CommRespUtils<List<Map<String, String>>> search(String searchKey) {
         List<Map<String, String>> list = new ArrayList<>();
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
         map.put("value", "黄金糕");
         map.put("label", "黄金糕");
         list.add(map);
