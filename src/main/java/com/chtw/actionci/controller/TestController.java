@@ -17,7 +17,7 @@ public class TestController {
 
     @GetMapping(value = "/state")
     public CommRespUtils<String> test() {
-        return CommRespUtils.success("这个接口用于测试！");
+        return CommRespUtils.success("this is test api！");
     }
 
     @GetMapping(value = "/search")
